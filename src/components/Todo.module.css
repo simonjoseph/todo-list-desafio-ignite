@@ -1,0 +1,46 @@
+.container{
+    margin: 0 auto;
+    width: 46rem;
+    margin-top: 4rem;
+}
+
+.mb24{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.task{
+    color: #4EA8DE;
+}
+
+.complete{
+    color: #8284FA
+}
+
+.btn{
+    border-radius: 999px;
+    background: #333333;
+    color: #fff;
+    font-size: .75rem;
+    margin-left: .5rem;
+    padding: .0625rem .5rem;
+}
+
+.border{
+    border-top: 1px solid #262626;
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subli{
+    font-weight: bolder;
+    color: #808080;
+    padding-top: 10px;
+}
+
+p{
+    color: #808080;
+}
