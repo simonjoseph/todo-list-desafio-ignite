@@ -1,5 +1,9 @@
+import { Card } from './Card';
 import styles from './Todo.module.css'
 export function Todo() {
+
+    const todoEmpty = false;
+
     return (
         <div className={styles.container}>
             <div className={styles.mb24}>
@@ -12,9 +16,10 @@ export function Todo() {
                     <span className={styles.btn}>0</span>
                 </div>
             </div>
-            <div className={styles.border}>
+            {todoEmpty ? (
+                <div className={styles.border}>
 
-                <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                     <rect width="56" height="56" fill="url(#pattern0_43_191)" />
                     <defs>
                         <pattern id="pattern0_43_191" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -28,6 +33,12 @@ export function Todo() {
                 <p>Crie tarefas e organize seus itens a fazer</p>
 
             </div>
+            ) : (
+                <div>
+                    <Card />
+                </div>
+            )
+            }
         </div>
     )
 }

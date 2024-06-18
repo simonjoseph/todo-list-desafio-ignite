@@ -1,0 +1,32 @@
+.card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background: #262626;
+    border-radius: 8px;
+    height: 72px;
+    padding: 10px;
+}
+
+.card input[type="checkbox"]{
+    border: 12px solid #9747FF;
+    outline: none;
+    cursor: pointer;
+    border-color: #9747FF;
+}
+
+.card input[type="checkbox"]:checked{
+    background: #9747FF;
+    border-color: #9747FF;
+}
+
+.card button{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.card button:hover svg{
+    color: #9747FF;
+}
