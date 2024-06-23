@@ -6,10 +6,17 @@ import { Todo } from "./components/Todo"
 function App() {
 
   const [tasks, setTasks] = useState([]);
+  const [isChecked, setIsChecked] = useState(false);
+  const [countTasksCompleted, setCountTasksCompleted] = useState(0);
 
   function onDelete (deleteTask){
     setTasks(tasks.filter((task) => task!== deleteTask))
   }
+
+    function handleCheck(task){
+        setIsChecked(task)
+        setCountTasksCompleted(countTasksCompleted + ( isChecked ? -1 : 1)  )
+    }
 
   return (
     <>
@@ -17,7 +24,7 @@ function App() {
     <div className="mt">
       <Search setTasks={setTasks} tasks={tasks} />
     </div>
-    <Todo tasks={tasks} onDelete={onDelete} />
+    <Todo tasks={tasks} onDelete={onDelete} isChecked={isChecked} handleCheck={handleCheck} countTasksCompleted={countTasksCompleted} />
     </>
   )
 }

@@ -5,15 +5,14 @@ export function Search({setTasks, tasks}) {
 
     const [task, setTask] = useState('');
     
-
     function handleCreateTask (){
         event.preventDefault()
         
-        // if (task.trim()) {
+        if (task.trim()) {
             setTasks([...tasks, task])
             console.log(tasks, task);
             setTask('');
-        // }
+        }
     }
 
     function handleChange(){

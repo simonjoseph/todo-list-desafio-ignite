@@ -1,12 +1,18 @@
 import { useState } from 'react'
 import styles from './Card.module.css'
 
-export function Card({ task, onDelete }) {
+export function Card({ task, onDelete, isChecked, handleCheck }) {
 
-    const [isChecked, setIsChecked] = useState(false);
-    function handleCheck(e){
-        console.log(isChecked);
-        setIsChecked(e.target.checked)
+    // const [isChecked, setIsChecked] = useState(false);
+    // function handleCheck(e){
+    //     console.log(isChecked);
+    //     setIsChecked(e.target.checked)
+    // }
+
+    function handleCheckBtn(e){
+        // console.log(isChecked);
+        let selected = e.target.checked
+        handleCheck(selected)
     }
 
     function handleDelete(){
@@ -15,7 +21,7 @@ export function Card({ task, onDelete }) {
 
     return (
         <div className={styles.card}>
-            <input onChange={handleCheck} checked={isChecked} type="checkbox" name="" id="" />
+            <input onChange={handleCheckBtn} checked={isChecked} type="checkbox" name="" id="" />
             <p className={isChecked ? styles.checked : styles.unchecked} >{task}</p>
             <button onClick={handleDelete} >
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,6 +1,6 @@
 import { Card } from './Card';
 import styles from './Todo.module.css'
-export function Todo({ tasks, onDelete }) {
+export function Todo({ tasks, onDelete, isChecked, handleCheck, countTasksCompleted }) {
 
     console.log(tasks, 'simao');
     return (
@@ -8,11 +8,11 @@ export function Todo({ tasks, onDelete }) {
             <div className={styles.mb24}>
                 <div>
                     <span className={styles.task}>Tarefas criadas</span>
-                    <span className={styles.btn}>0</span>
+                    <span className={styles.btn}>{tasks.length}</span>
                 </div>
                 <div>
                     <span className={styles.complete}>Concluidas</span>
-                    <span className={styles.btn}>0</span>
+                    <span className={styles.btn}>{countTasksCompleted}</span>
                 </div>
             </div>
             {tasks.length === 0 ? (
@@ -35,7 +35,7 @@ export function Todo({ tasks, onDelete }) {
             ) : (
                 <div>
                     {tasks.map((task) => (
-                        <Card task={task} key={task} onDelete={onDelete} />
+                        <Card task={task} key={task} onDelete={onDelete} isChecked={isChecked} handleCheck={handleCheck} />
                     ))}
                 </div>
             )
