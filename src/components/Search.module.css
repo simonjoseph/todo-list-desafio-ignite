@@ -1,4 +1,4 @@
-.form{
+.form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,7 +6,7 @@
     margin: 0 auto;
 }
 
-.form input{
+.form input {
     width: 39.875rem;
     height: 3.375rem;
     background: #262626;
@@ -17,12 +17,12 @@
     color: #808080
 }
 
-.form input:focus{
+.form input:focus {
     color: #F2F2F2;
     border: 1px solid #5E60CE;
 }
 
-.form button{
+.form button {
     width: 5.625rem;
     height: 3.25rem;
     background: #1E6F9F;
@@ -31,13 +31,18 @@
     border: none;
     border-radius: 8px;
     cursor: pointer;
+
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
 }
 
-.form button:hover{
+.form button:hover {
     background: #4EA8DE;
     color: #F2F2F2;
 }
 
-.form button img{
+.form button img {
     margin: 0 auto;
 }
